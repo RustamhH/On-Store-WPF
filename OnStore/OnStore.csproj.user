@@ -7,11 +7,17 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="AddProduct.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="BuyedProducts.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="AddProduct.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="BuyedProducts.xaml">
       <SubType>Designer</SubType>
     </Page>

@@ -23,3 +23,5 @@ D:\WinForm & WPF\OnStore\OnStore\bin\Debug\net6.0-windows\Bogus.dll
 D:\WinForm & WPF\OnStore\OnStore\obj\Debug\net6.0-windows\OnStore.csproj.CopyComplete
 D:\WinForm & WPF\OnStore\OnStore\obj\Debug\net6.0-windows\BuyedProducts.g.cs
 D:\WinForm & WPF\OnStore\OnStore\obj\Debug\net6.0-windows\BuyedProducts.baml
+D:\WinForm & WPF\OnStore\OnStore\obj\Debug\net6.0-windows\AddProduct.g.cs
+D:\WinForm & WPF\OnStore\OnStore\obj\Debug\net6.0-windows\AddProduct.baml

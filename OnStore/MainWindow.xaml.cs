@@ -31,7 +31,7 @@ namespace OnStore
     {
         
 
-        public ObservableCollection<Product>? Products { get; set; } = new ObservableCollection<Product>();
+        static public ObservableCollection<Product>? Products { get; set; } = new ObservableCollection<Product>();
         public ObservableCollection<Product>? BuyedProducts { get; set; } = new ObservableCollection<Product>();
 
         public Product SelectedProduct { get; set; } = new();
@@ -54,23 +54,6 @@ namespace OnStore
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         public ObservableCollection<Product> GenerateFakeData(int itemCount)
         {
@@ -150,6 +133,12 @@ namespace OnStore
                 Stackpanel.Visibility = Visibility.Hidden;
             }
             else NameTextBox.IsEnabled = PriceTextBox.IsEnabled = ContentTextBox.IsEnabled = ImageTextBox.IsEnabled = true;
-        } 
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddProduct window = new();
+            window.Show();
+        }
     }
 }

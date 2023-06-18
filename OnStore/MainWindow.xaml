@@ -39,7 +39,7 @@
                 <TextBox BorderBrush="#2B5E3D" Name="SearchTextBox" Grid.Row="0" Width="300" Height="40" Text=" Search..." VerticalContentAlignment="Center" FontSize="17" Foreground="Gray" GotFocus="SearchTextBox_GotFocus"></TextBox>
 
 
-                <Button Grid.Row="0" Width="30" Height="30" Margin="370 0 0 0" Background="Transparent" BorderBrush="Transparent">
+                <Button x:Name="AddButton" Grid.Row="0" Width="30" Height="30" Margin="370 0 0 0" Background="Transparent" BorderBrush="Transparent" Click="AddButton_Click">
                     <Button.ToolTip>
                         <StackPanel>
                             <TextBlock FontWeight="Bold"  Text="Add Product"></TextBlock>
@@ -56,8 +56,7 @@
 
 
 
-
-                <ListBox Name="listBox" ItemsSource="{Binding Products}" Grid.Row="1" MouseDoubleClick="listBox_MouseDoubleClick">
+                <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="listBox" ItemsSource="{Binding Products}" Grid.Row="1" MouseDoubleClick="listBox_MouseDoubleClick">
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
                             <WrapPanel Orientation="Horizontal" />

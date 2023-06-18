@@ -26,10 +26,5 @@ namespace OnStore
             InitializeComponent();
             DataContext = this;
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show(MyProducts[0].ToString());
-        }
     }
 }
