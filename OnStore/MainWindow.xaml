@@ -54,14 +54,13 @@
                     <Image Source="icons/add product.png" Width="30"></Image>
                 </Button>
 
-
-
-                <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="listBox" ItemsSource="{Binding Products}" Grid.Row="1" MouseDoubleClick="listBox_MouseDoubleClick">
-                    <ListBox.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <WrapPanel Orientation="Horizontal" />
-                        </ItemsPanelTemplate>
-                    </ListBox.ItemsPanel>
+                    
+                    <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="listBox" ItemsSource="{Binding Products}" Grid.Row="1" MouseDoubleClick="listBox_MouseDoubleClick">
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal" />
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Margin="0 0 30 0">
@@ -86,6 +85,7 @@
 
 
         <StackPanel Grid.Column="1" Name="Stackpanel" Visibility="Hidden">
+            <Image Source="{Binding SelectedProduct.ImageUrl}" Width="100" Height="100"></Image>
             <TextBox Name="NameTextBox" IsEnabled="False" Text="{Binding SelectedProduct.Name}" Height="50"></TextBox>
             <TextBox Name="ContentTextBox" IsEnabled="False" Text="{Binding SelectedProduct.Content}" Height="50"></TextBox>
             <TextBox Name="ImageTextBox" IsEnabled="False" Text="{Binding SelectedProduct.ImageUrl }"  Height="50"></TextBox>
