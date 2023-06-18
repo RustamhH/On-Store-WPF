@@ -1,0 +1,31 @@
+﻿<Window x:Class="OnStore.BuyedProducts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OnStore"
+        mc:Ignorable="d"
+        Title="BuyedProducts" Height="450" Width="800">
+    <Grid>
+        <ListBox Name="listBox" ItemsSource="{Binding MyProducts}">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="0 0 30 0">
+                        <Image x:Name="ProductImage" Source="{Binding ImageUrl}" Width="50" Height="50" />
+                        <TextBlock x:Name="ProductName" Text="{Binding Name}" Margin="10,0,0,0" VerticalAlignment="Center" FontWeight="Bold"/>
+                        <TextBlock x:Name="ProductContent" Text="{Binding Content}" Margin="10,0,0,0" VerticalAlignment="Center" FontStyle="Italic" />
+                        <WrapPanel>
+                            <TextBlock x:Name="ProductPrice" Text="{Binding Price}" Margin="10,0,0,0" VerticalAlignment="Center" />
+                            <TextBlock Text="$" VerticalAlignment="Center" />
+                        </WrapPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>

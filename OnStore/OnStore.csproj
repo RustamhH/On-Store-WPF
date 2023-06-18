@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="icons\add product.png" />
+    <None Remove="icons\buy product.png" />
+    <None Remove="icons\shopping bag.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="34.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="icons\add product.png" />
+    <Resource Include="icons\buy product.png" />
+    <Resource Include="icons\shopping bag.png" />
+  </ItemGroup>
+
+</Project>
