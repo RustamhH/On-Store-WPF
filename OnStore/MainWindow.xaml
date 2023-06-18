@@ -70,7 +70,7 @@
                                 <TextBlock x:Name="ProductName" Text="{Binding Name}" Margin="10,0,0,0" VerticalAlignment="Center" FontWeight="Bold"/>
                                 <TextBlock x:Name="ProductContent" Text="{Binding Content}" Margin="10,0,0,0" VerticalAlignment="Center" FontStyle="Italic" />
                                 <WrapPanel>
-                                    <TextBlock x:Name="ProductPrice" Text="{Binding Price}" Margin="10,0,0,0" VerticalAlignment="Center" />
+                                    <TextBlock x:Name="ProductPrice" Text="{Binding Price}" Margin="10,0,0,0" VerticalAlignment="Center"/>
                                     <TextBlock Text="$" VerticalAlignment="Center" />
                                 </WrapPanel>
                                 <Button x:Name="BuyProduct" Background="Transparent" Width="20" Height="20" BorderBrush="Transparent" Click="BuyProduct_Click">
@@ -86,8 +86,12 @@
 
 
 
-        <StackPanel Grid.Column="1">
-            
+        <StackPanel Grid.Column="1" Name="Stackpanel" Visibility="Hidden">
+            <TextBox Name="NameTextBox" IsEnabled="False" Text="{Binding SelectedProduct.Name}" Height="50"></TextBox>
+            <TextBox Name="ContentTextBox" IsEnabled="False" Text="{Binding SelectedProduct.Content}" Height="50"></TextBox>
+            <TextBox Name="ImageTextBox" IsEnabled="False" Text="{Binding SelectedProduct.ImageUrl }"  Height="50"></TextBox>
+            <TextBox Name="PriceTextBox" IsEnabled="False" Text="{Binding SelectedProduct.Price }"  Height="50"></TextBox>
+            <Button Name="EditButtom" Height="30" Content="Edit Product" Click="EditButtom_Click"></Button>
         </StackPanel>
         
         

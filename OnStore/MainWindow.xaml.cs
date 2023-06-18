@@ -34,6 +34,10 @@ namespace OnStore
         public ObservableCollection<Product>? Products { get; set; } = new ObservableCollection<Product>();
         public ObservableCollection<Product>? BuyedProducts { get; set; } = new ObservableCollection<Product>();
 
+        public Product SelectedProduct { get; set; } = new();
+
+
+
         public MainWindow()
         {
             Products.Add(new Product("Coca-Cola","Liquor",20, @"https://www.bakenroll.az/en/image/coca-cola.jpg"));
@@ -115,9 +119,37 @@ namespace OnStore
 
         private void listBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            ListBoxItem lbi = sender as ListBoxItem;
-            
+
+            var selectedItem = listBox.SelectedItem;
+            var selectedProduct = selectedItem as Product;
+
+            SelectedProduct.Name = selectedProduct.Name;
+            SelectedProduct.Content = selectedProduct.Content;
+            SelectedProduct.ImageUrl = selectedProduct.ImageUrl;
+            SelectedProduct.Price = selectedProduct.Price;
+
+            Stackpanel.Visibility = Visibility.Visible;
             
         }
+
+        private void EditButtom_Click(object sender, RoutedEventArgs e) {
+            if(NameTextBox.IsEnabled)
+            {
+                SelectedProduct.Name = NameTextBox.Text;
+                SelectedProduct.Content = ContentTextBox.Text;
+                SelectedProduct.ImageUrl = ImageTextBox.Text;
+                if(double.TryParse(PriceTextBox.Text,out double result)) SelectedProduct.Price = result;
+
+
+                var pr = listBox.SelectedItem as Product;
+                pr.Name = SelectedProduct.Name;
+                pr.Content = SelectedProduct.Content;
+                pr.ImageUrl = SelectedProduct.ImageUrl;
+                pr.Price = SelectedProduct.Price;
+
+                Stackpanel.Visibility = Visibility.Hidden;
+            }
+            else NameTextBox.IsEnabled = PriceTextBox.IsEnabled = ContentTextBox.IsEnabled = ImageTextBox.IsEnabled = true;
+        } 
     }
 }
