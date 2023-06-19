@@ -28,12 +28,14 @@ namespace OnStore
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (ProductName.Text == "" && ProductContent.Text == "" && ProductImage.Text == "" && ProductPrice.Text == "") return;
-            NewProduct.Name = ProductName.Text;
-            NewProduct.Content = ProductContent.Text;
-            NewProduct.ImageUrl = ProductImage.Text;
-            if(double.TryParse(ProductPrice.Text,out double result)) NewProduct.Price=result;
-            MainWindow.Products.Add(NewProduct);
+            if (ProductName.Text != "" && ProductContent.Text != "" && ProductImage.Text != "" && ProductPrice.Text != "")
+            {
+                NewProduct.Name = ProductName.Text;
+                NewProduct.Content = ProductContent.Text;
+                NewProduct.ImageUrl = ProductImage.Text;
+                if(double.TryParse(ProductPrice.Text,out double result)) NewProduct.Price=result;
+                MainWindow.Products.Add(NewProduct);
+            }
         }
     }
 }

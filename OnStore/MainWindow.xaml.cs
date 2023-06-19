@@ -118,12 +118,6 @@ namespace OnStore
         private void EditButtom_Click(object sender, RoutedEventArgs e) {
             if(NameTextBox.IsEnabled)
             {
-                SelectedProduct.Name = NameTextBox.Text;
-                SelectedProduct.Content = ContentTextBox.Text;
-                SelectedProduct.ImageUrl = ImageTextBox.Text;
-                if(double.TryParse(PriceTextBox.Text,out double result)) SelectedProduct.Price = result;
-
-
                 var pr = listBox.SelectedItem as Product;
                 pr.Name = SelectedProduct.Name;
                 pr.Content = SelectedProduct.Content;

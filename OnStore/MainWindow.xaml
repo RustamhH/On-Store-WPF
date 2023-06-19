@@ -68,7 +68,7 @@
                             <StackPanel Margin="0 0 30 0">
                                 <Image x:Name="ProductImage" Source="{Binding ImageUrl}" Width="50" Height="50" />
                                 <TextBlock x:Name="ProductName" Text="{Binding Name}" Margin="10,0,0,0" VerticalAlignment="Center" FontWeight="Bold"/>
-                                <TextBlock x:Name="ProuctContent" Text="{Binding Content}" Margin="10,0,0,0" VerticalAlignment="Center" FontStyle="Italic" />
+                                <TextBlock x:Name="ProductContent" Text="{Binding Content}" Margin="10,0,0,0" VerticalAlignment="Center" FontStyle="Italic" />
                                 <WrapPanel>
                                     <TextBlock x:Name="ProductPrice" Text="{Binding Price}" Margin="10,0,0,0" VerticalAlignment="Center"/>
                                     <TextBlock Text="$" VerticalAlignment="Center" />
