@@ -9,13 +9,13 @@
     <Grid>
         <StackPanel Margin="20" HorizontalAlignment="Left">
             <TextBlock Text="Product Name" FontSize="20" HorizontalAlignment="Center" Margin="10" Foreground="White" FontStyle="Italic"></TextBlock>
-            <TextBox x:Name="ProductName" Width="300" Height="30"></TextBox>
+            <TextBox x:Name="ProductName" Width="300" Height="30" Text="{Binding NewProduct.Name}"></TextBox>
             <TextBlock Text="Product Content" FontSize="20" HorizontalAlignment="Center" Margin="10" Foreground="White" FontStyle="Italic"></TextBlock>
-            <TextBox x:Name="ProductContent" Width="300" Height="30"></TextBox>
+            <TextBox x:Name="ProductContent" Width="300" Height="30" Text="{Binding NewProduct.Content}"></TextBox>
             <TextBlock Text="Product Image" FontSize="20" HorizontalAlignment="Center" Margin="10" Foreground="White" FontStyle="Italic"></TextBlock>
-            <TextBox  x:Name="ProductImage" Width="300" Height="30"></TextBox>
+            <TextBox  x:Name="ProductImage" Width="300" Height="30" Text="{Binding NewProduct.ImageUrl}"></TextBox>
             <TextBlock Text="Product Price" FontSize="20" HorizontalAlignment="Center" Margin="10" Foreground="White" FontStyle="Italic"></TextBlock>
-            <TextBox x:Name="ProductPrice" Width="300" Height="30"></TextBox>
+            <TextBox x:Name="ProductPrice" Width="300" Height="30" Text="{Binding NewProduct.Price}"></TextBox>
             <Button Content="Save" Width="100" Height="30" Margin="0 20 0 0" Click="Button_Click"></Button>
             
         </StackPanel>

@@ -27,7 +27,7 @@ namespace OnStore
 
 
 
-    public partial class MainWindow : Window, INotifyPropertyChanged
+    public partial class MainWindow : Window
     {
         
 
@@ -47,24 +47,8 @@ namespace OnStore
             DataContext = this;
         }
 
-        public event PropertyChangedEventHandler? PropertyChanged;
 
-
-        public void OnPropertyChange([CallerMemberName] string? name = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
-
-        public ObservableCollection<Product> GenerateFakeData(int itemCount)
-        {
-            var faker = new Faker<Product>()
-                .RuleFor(x => x.Name, f => f.Commerce.ProductName())
-                .RuleFor(x => x.Price, f => Convert.ToDouble(f.Commerce.Price()));
-                
-
-            var fakeData = faker.Generate(itemCount);
-            return new ObservableCollection<Product>(fakeData);
-        }
+        
 
         private void SearchTextBox_GotFocus(object sender, RoutedEventArgs e)
         {

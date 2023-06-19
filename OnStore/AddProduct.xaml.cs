@@ -25,17 +25,6 @@ namespace OnStore
             InitializeComponent();
             DataContext = this;
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            if (ProductName.Text != "" && ProductContent.Text != "" && ProductImage.Text != "" && ProductPrice.Text != "")
-            {
-                NewProduct.Name = ProductName.Text;
-                NewProduct.Content = ProductContent.Text;
-                NewProduct.ImageUrl = ProductImage.Text;
-                if(double.TryParse(ProductPrice.Text,out double result)) NewProduct.Price=result;
-                MainWindow.Products.Add(NewProduct);
-            }
-        }
+        private void Button_Click(object sender, RoutedEventArgs e) => MainWindow.Products.Add(NewProduct);
     }
 }
